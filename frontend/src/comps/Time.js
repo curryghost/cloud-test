@@ -11,7 +11,7 @@ export const Time = () => {
     useEffect(() => {
         const tick = setInterval(tickHandler, 1000)
         return () => clearInterval(tick);
-    }, [])
+    })
 
     return (
         <div>
