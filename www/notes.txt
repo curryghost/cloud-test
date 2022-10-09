@@ -1,0 +1,3 @@
+This folder is for nginx to host static files.
+
+Empty this folder during developement or run "npm run clean" to remove files in this folder.
