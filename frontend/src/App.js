@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <h1>Hello World</h1>
+      <h1>Hello World!</h1>
       {isDisplay && <Time />}
       <button onClick={toggleHandler}>Show Time</button>
     </div>
