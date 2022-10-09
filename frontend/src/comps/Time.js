@@ -1,17 +1,17 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Time = () => {
     const [time, setTime] = useState(new Date().toLocaleString());
 
-    const tickHandler = useCallback(() => {
+    const tickHandler = () => {
         setTime(new Date().toLocaleString());
         console.log(time)
-    });
+    }
 
     useEffect(() => {
         const tick = setInterval(tickHandler, 1000)
         return () => clearInterval(tick);
-    }, [tickHandler])
+    }, [])
 
     return (
         <div>
