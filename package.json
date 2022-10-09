@@ -1,0 +1,13 @@
+{
+  "name": "cloud-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -r ./www/* && (NODE_ENV=production && cd frontend && npm run build) && cp ./frontend/build/* ./www/*",
+    "clean": "rm -r ./www/*"
+  },
+  "author": "",
+  "license": "ISC"
+}
