@@ -3,13 +3,13 @@ steps:
   args: [npm build]
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test', '.']
+  args: ['build', '-t', 'asia-docker.pkg.dev/stable-century-323714/cloud-test-repo/cloud-test', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test']
+  args: ['push', 'asia-docker.pkg.dev/stable-century-323714/cloud-test-repo/cloud-test']
 
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'docker-test-server', '--image', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test', '--region', 'asia-southeast2']
+  args: ['run', 'deploy', 'docker-test-server', '--image', 'asia-docker.pkg.dev/stable-century-323714/cloud-test-repo/cloud-test', '--region', 'asia-southeast2']
 images:
-- asia-docker.pkg/dev/${PROJECT_ID}/cloud-test-repo/cloud-test
+- asia-docker.pkg/dev/stable-century-323714/cloud-test-repo/cloud-test
