@@ -1,9 +1,9 @@
 steps:
   - name: 'node'
-  - args: [npm build]
+    args: [npm build]
 
   - name: 'gcr.io/cloud-builders/docker'
-  - args: ['build', '-t', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test', '.']
+    args: ['build', '-t', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test']
