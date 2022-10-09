@@ -13,3 +13,5 @@ steps:
     args: ['run', 'deploy', 'docker-test-server', '--image', 'asia-docker.pkg.dev/stable-century-323714/cloud-test-repo/cloud-test', '--region', 'asia-southeast2']
 images:
 - asia-docker.pkg/dev/stable-century-323714/cloud-test-repo/cloud-test
+options:
+  logging: CLOUD_LOGGING_ONLY
