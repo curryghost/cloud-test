@@ -9,7 +9,7 @@ steps:
     args: ['push', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: gcloud
-  args: ['run', 'deploy', 'docker-test-server', '--image', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test', '--region', 'asia-southeast2']
-images:
-- asia-docker.pkg/dev/${PROJECT_ID}/cloud-test-repo/cloud-test
+    entrypoint: gcloud
+    args: ['run', 'deploy', 'docker-test-server', '--image', 'asia-docker.pkg.dev/${PROJECT_ID}/cloud-test-repo/cloud-test', '--region', 'asia-southeast2']
+  images:
+  - asia-docker.pkg/dev/${PROJECT_ID}/cloud-test-repo/cloud-test
