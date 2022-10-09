@@ -53,6 +53,7 @@ env:
   GAR_LOCATION: asia # TODO: update Artifact Registry location
   SERVICE: cloud-test # TODO: update Cloud Run service name
   REGION: asia-southeast2 # TODO: update Cloud Run service region
+  NODE_ENV: production
 
 jobs:
   deploy:
@@ -70,7 +71,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm run build     
+      - run: npm i --prefix ./frontend
+      - run: npm run build
 
       - name: Google Auth
         id: auth
